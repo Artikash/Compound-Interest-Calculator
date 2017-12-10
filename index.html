@@ -1,16 +1,22 @@
 <html lang="en-US">
    <body>
        <script src="Calculator.js"></script>
+       <script src="main.js"></script>
        <h1>Compound Interest Calculator</h1>
        <p>
-        <button onclick="window.Calculate = calculateFinalAmount; document.getElementById('inputs').style.display = inline;">Amount after X years</button>
-        <button onclick="window.Calculate = calculateTimeToZero; document.getElementById('inputs').style.display = inline;">Time to pay off loan</button>
+        <button onclick="window.Calculate = calculateFinalAmount; document.getElementById('inputs').style.display = 'inline';">Amount after X years</button>
+        <button onclick="window.Calculate = calculateTimeToZero; document.getElementById('inputs').style.display = 'inline';">Time to pay off loan</button>
         <br>
         <span id="inputs" style="display:none">
-            <input id="principal" type="text" value="Enter initial amount here">
-            <input id="interestRate" type="text" value="Enter interest rate here">
-            <input id="monthlyAddition" type="text" value="Enter monthly contribution here">
-            <button onclick="window.Calculate(); document.getElementById('inputs').style.display = none;">Calculate!</button>
+            $<input id="principal" type="text" placeholder="Enter initial amount here">
+            <br>
+            <input id="interestRate" type="text" placeholder="Enter interest rate here">%
+            <br>
+            <input id="time" type="text" placeholder="Enter time here">years
+            <br>
+            $<input id="monthlyAddition" type="text" placeholder="Enter monthly contribution here">
+            <br>
+            <button onclick="window.Calculate(); document.getElementById('inputs').style.display = 'none';">Calculate!</button>
         </span>
         </p>
         <p id="output"></p>
