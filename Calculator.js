@@ -22,4 +22,12 @@ window.CompoundingInterest = function(principal, interestRate) {
     }
     return time;
   };
+  this.monthlyPayments = function(time) {
+    var testPayment = this.calculateFinalAmount(time, 0) / time;
+    var testAmount = this.calculateFinalAmount(time, testPayment);
+    while (Math.abs(testAmount) < 10) {
+      testPayment = testAmount > 0 ? testPayment * 1.1 : testPayment * 0.9;
+      testAmount = this.calculateFinalAmount(time, testPayment);
+    }
+  };
 };

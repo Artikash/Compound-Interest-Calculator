@@ -11,24 +11,24 @@
         <button onclick="window.Calculate = calculateTimeToZero; 
         document.getElementById('inputs').style.display = 'inline'; 
         document.getElementById('timefield').style.display = 'none'">Time to pay off loan</button>
-        <br>
-        <span id="inputs" style="display:none">
-            $
-            <input id="principal" type="text" placeholder="Initial amount">
-            <br>
-            <input id="interestRate" type="text" placeholder="Interest rate">%
-            <br>
-            <span id="timefield">
-                <input id="time" type="text" placeholder="Time">years
+        <p>
+            <span id="inputs" style="display:none">
+                $
+                <input id="principal" type="text" placeholder="Initial amount">
                 <br>
+                <input id="interestRate" type="text" placeholder="Interest rate">%
+                <br>
+                <span id="timefield">
+                    <input id="time" type="text" placeholder="Time">years
+                    <br>
+                </span>
+                $
+                <input id="monthlyAddition" type="text" placeholder="Monthly contribution">
+                <br>
+                <button onclick="window.Calculate(); document.getElementById('inputs').style.display = 'none';">Calculate!</button>
             </span>
-            $
-            <input id="monthlyAddition" type="text" placeholder="Monthly contribution">
-            <br>
-            <button onclick="window.Calculate(); document.getElementById('inputs').style.display = 'none';">Calculate!</button>
-        </span>
-    </p>
-    <p id="output"></p>
+        </p>
+        <p id="output"></p>
 </body>
 
 </html>
