@@ -5,27 +5,21 @@
     <script src="main.js"></script>
     <h1>Compound Interest Calculator</h1>
     <p>
-        <button onclick="window.Calculate = calculateFinalAmount; 
-        document.getElementById('inputs').style.display = 'inline'; 
-        document.getElementById('timefield').style.display = 'inline'">Amount after X years</button>
-        <button onclick="window.Calculate = calculateTimeToZero; 
-        document.getElementById('inputs').style.display = 'inline'; 
-        document.getElementById('timefield').style.display = 'none'">Time to pay off loan</button>
+        <button onclick="window.Calculate = calculateFinalAmount; document.getElementById('inputs').style.display = 'inline'; ">Amount after X years</button>
+        <button onclick="window.Calculate = calculateTimeToZero; document.getElementById('inputs').style.display = 'inline'; ">Time to pay off loan</button>
+        <button onclick="window.Calculate = calculateMonthlyPayments; document.getElementById('inputs').style.display = 'inline'; ">Monthly payments</button>
         <p>
             <span id="inputs" style="display:none">
                 $
                 <input id="principal" type="text" placeholder="Initial amount">
                 <br>
-                <input id="interestRate" type="text" placeholder="Interest rate">%
+                <input id="interestRate" type="text" placeholder="Interest rate">% per year
                 <br>
-                <span id="timefield">
-                    <input id="time" type="text" placeholder="Time">years
-                    <br>
-                </span>
-                $
-                <input id="monthlyAddition" type="text" placeholder="Monthly contribution">
+                <input id="time" type="text" placeholder="Time">years
+                <br> $
+                <input id="monthlyAddition" type="text" placeholder="Monthly contribution">paid per month
                 <br>
-                <button onclick="window.Calculate(); document.getElementById('inputs').style.display = 'none';">Calculate!</button>
+                <button onclick="window.Calculate();">Calculate!</button>
             </span>
         </p>
         <p id="output"></p>
