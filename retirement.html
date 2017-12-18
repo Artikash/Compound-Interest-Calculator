@@ -17,7 +17,7 @@
     </div>
     <script src="Calculator.js"></script>
     <script src="retirement.js"></script>
-    <div class="col-sm-6">
+    <div class="col-sm-5">
         <p>$
             <input id="principal" type="number" min="0" step="1000" placeholder="Initial amount"> at start
             <br>
@@ -27,14 +27,14 @@
             <br>
             <input id="years" type="number" min="0" step="1" placeholder="Time"> years till retirement
             <br>$
-            <input id="yearlyAddition" type="number" min="0" step="100" placeholder="Yearly contribution"> saved post-tax per year (assumed to increase with inflation)
+            <input id="yearlyAddition" type="number" min="100" step="100" placeholder="Yearly contribution"> saved post-tax per year (assumed to increase with inflation)
             <br>$
             <input id="yearlyWithdrawal" type="number" min="100" step="100" placeholder="Yearly withdrawal"> withdrawn post-tax per year in retirement (assumed to increase with inflation)
             <br>
             <button onclick="calculateTimeToZero()">Calculate!</button>
         </p>
     </div>
-    <div class="col-sm-6" id="output"></div>
+    <div class="col-sm-5" id="output"></div>
 </body>
 
 </html>
