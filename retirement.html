@@ -13,23 +13,23 @@
 <body>
     <div class="jumbotron text-center">
         <h1>Retirement Calculator</h1>
-        <p>Enter your retirement plan and see how far it'll take you!</p>
+        <p>How far will your retirement plan take you?</p>
     </div>
     <script src="Calculator.js"></script>
     <script src="retirement.js"></script>
     <div class="col-sm-5">
         <p>$
-            <input id="principal" type="number" min="0" step="1000" placeholder="Initial amount"> at start
+            <input id="principal" type="number" min="0" step="1000" value="100000" placeholder="Initial amount"> at start
             <br>
-            <input id="interestRate" type="number" min="0" step="0.01" placeholder="Interest rate"> % gain per year
+            <input id="interestRate" type="number" min="0" step="0.01" value="7" placeholder="Interest rate"> % gain per year
             <br>
-            <input id="inflationRate" type="number" min="0" step="0.01" placeholder="Inflation rate"> % inflation per year
+            <input id="inflationRate" type="number" min="0" step="0.01" value="3" placeholder="Inflation rate"> % inflation per year
             <br>
-            <input id="years" type="number" min="0" step="1" placeholder="Time"> years till retirement
+            <input id="years" type="number" min="0" step="1" value="15" placeholder="Time"> years till retirement
             <br>$
-            <input id="yearlyAddition" type="number" min="100" step="100" placeholder="Yearly contribution"> saved post-tax per year (assumed to increase with inflation)
+            <input id="yearlyAddition" type="number" min="100" step="100" value="3000" placeholder="Yearly contribution"> saved post-tax per year (assumed to increase with inflation)
             <br>$
-            <input id="yearlyWithdrawal" type="number" min="100" step="100" placeholder="Yearly withdrawal"> withdrawn post-tax per year in retirement (assumed to increase with inflation)
+            <input id="yearlyWithdrawal" type="number" min="100" step="100" value="25000" placeholder="Yearly withdrawal"> withdrawn post-tax per year in retirement (assumed to increase with inflation)
             <br>
             <button onclick="calculateTimeToZero()">Calculate!</button>
         </p>
