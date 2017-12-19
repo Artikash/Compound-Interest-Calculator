@@ -21,7 +21,7 @@ function calculateTimeToZero() {
   if (principalByYear.length < 5000) {
     for (var j = 0; j < principalByYear.length; j++) {
       var display = document.createElement("p");
-      display.textContent = "Year " + j + ": $" + Math.floor(principalByYear[j] / Math.pow(1.03, j));
+      display.textContent = "Year " + j + ": $" + Math.floor(principalByYear[j] / Math.pow(inflation, j));
       output.appendChild(display);
     }
   }
