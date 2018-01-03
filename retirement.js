@@ -10,7 +10,6 @@ function calculateTimeToZero() {
 	var inflation = parseFloat(document.getElementById("inflationRate").value) / 100;
 	var yearlyContributions = Array(years).fill(parseFloat(document.getElementById("yearlyAddition").value));
 	yearlyContributions = yearlyContributions.concat(Array(100).fill(-document.getElementById("yearlyWithdrawal").value));
-	for (var i = 0; i < yearlyContributions.length; i++) yearlyContributions[i] *= Math.pow(1 + inflation, i);
 	var principalByYear = new CompoundingInterest(principal, interestRate, inflation).simulateUntilZero(yearlyContributions);
 	var retirementLengthDisplay = document.createElement("p");
 	retirementLengthDisplay.textContent =
