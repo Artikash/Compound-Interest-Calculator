@@ -1,6 +1,7 @@
-window.CompoundingInterest = function(principal, interestRate) {
+window.CompoundingInterest = function(principal, interestRate, inflationRate) {
   this.principal = principal;
   this.interestRate = interestRate;
+  this.inflationRate = inflationRate;
 
   this.finalAmount = function(time, yearlyAddition) {
     var currentPrincipal = this.principal;
@@ -17,6 +18,7 @@ window.CompoundingInterest = function(principal, interestRate) {
       var currentPrincipal = principalByYear[principalByYear.length - 1];
       currentPrincipal += yearlyAddition[principalByYear.length - 1] || yearlyAddition[yearlyAddition.length - 1];
       currentPrincipal *= 1 + this.interestRate;
+      currentPrincipal /= 1 + this.inflationRate;
       principalByYear.push(currentPrincipal);
       if (principalByYear.length > 5000) {
         break;

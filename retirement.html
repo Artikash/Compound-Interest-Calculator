@@ -17,7 +17,7 @@
     </div>
     <script src="Calculator.js"></script>
     <script src="retirement.js"></script>
-    <div class="col-sm-5">
+    <div class="col-sm-6">
         <p>$
             <input id="principal" type="number" min="0" step="1000" value="100000" placeholder="Initial amount"> at start
             <br>
@@ -34,7 +34,10 @@
             <button onclick="calculateTimeToZero()">Calculate!</button>
         </p>
     </div>
-    <div class="col-sm-5" id="output"></div>
+    <div class="col-sm-6">
+        <canvas id="outputcanvas" height="400" width="600" style="border:1px solid #000000;"></canvas>
+        <div id="outputtext">Enter your retirement plan!</div>
+    </div>
 </body>
 
 </html>
